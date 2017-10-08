@@ -7,10 +7,11 @@
 
 </head>
 <body>
+<div id = "body">
 <div id = "uppernavigation">
   <ul>
     <li>NIGHTLIFE</li>
-    <li id="signupbutton">SIGNUP
+    <li><div id="signupbutton" onclick="signupclick()">SIGNUP</div>
       <div id = "signupdropdown">
         <div id="signupmessage"></div><br><br>
           <label for ="Username">Username</label><br>
@@ -21,9 +22,10 @@
           <input name="password" type="password" placeholder="Enter your password" id="signuppassword"><br><br>
           <button name="name" value="value" type="submit" onclick="processSignup()">SignUp</button>
       </div>
+      <div id = "loadersignup" class="loader"></div>
     </li>
 
-    <li id="loginbutton">LOGIN
+    <li><div id="loaderlogin" class="loader"></div> <div id="loginbutton" onclick="loginclick()">LOGIN</div>
       <div id = "logindropdown">
         <div id = "loginmessage"></div><br><br>
           <label for="Email-id">Email-id</label><br>
@@ -37,11 +39,19 @@
 </div>
 
 <div id = "searchplaces">
-  <label for="places">ENTER YOUR LOCATION</label><br><br>
-  <input type="text" placeholder="Enter your location" name="places" id="places">
+  <label for="places" id = "placeslabel">ENTER YOUR LOCATION</label><br><br>
+  <input type="text" placeholder="WHERE YOU AT?" name="places" id="places">
   <div id="search" onclick="search()">
     <i class="fa fa-search" aria-hidden="true"></i>
   </div>
 </div>
+</div>
+
+<div id="loader" class = "spinnermain">
+<i class="fa fa-glass" style="font-size: 150px" aria-hidden="true">
+  <i class="fa fa-spinner" style="font-size:50px" aria-hidden="true"></i>
+</i>
+</div>
+
 </body>
 </html>
