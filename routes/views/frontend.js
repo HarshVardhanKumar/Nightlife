@@ -73,7 +73,7 @@ function checkLogin() {
             loggedinuser = true ;
           }
           else {
-            document.getElementById('loginmessage').innerHTML = "Login Failed" ;
+            document.getElementById('loginmessage').innerHTML = "Login Failed!!. Please try again." ;
           }
         //}
       //}) ;

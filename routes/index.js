@@ -56,6 +56,14 @@ router.get('/checkUserLogin', function(req, res) {
   }
   res.jsonp(object) ;
   console.log(object) ;
+});
+
+router.get('/loginuser.jpg', function(req, res) {
+  res.sendFile(__dirname+'/views/loginuser.jpg') ;
+});
+
+router.get('/signup-user.png', function(req, res) {
+  res.sendFile(__dirname+'/views/signup-user.png') ;
 })
 
 router.get('/placesnightlife_noofusers', function(req,res) {
@@ -84,6 +92,7 @@ router.get('/placesnightlife_noofusers', function(req,res) {
     }
   })
 })
+
 router.post('/createUser', function(req, res) {
   mongo.connect(mongourl, function(err, db) {
   if(db!==null) {
@@ -154,6 +163,11 @@ router.post('/checkUserLogin', function(req, res) {
             object.value = "OK" ;
             object.username = req.session.username ;
           }
+          res.jsonp(object) ;
+        }
+        else {
+          var object = {} ;
+          object.value = "notok" ;
           res.jsonp(object) ;
         }
       }

@@ -14,27 +14,45 @@
     <li><div id="signupbutton" onclick="signupclick()">SIGNUP</div>
       <div id = "signupdropdown">
         <div id="signupmessage"></div><br><br>
-          <label for ="Username">Username</label><br>
-          <input name="Username" type="text" placeholder="Enter your username" id="signupusername"><br><br>
-          <label for="Email-id">Email-id</label><br>
-          <input name = "Email-id" type="text" placeholder="Enter your email-id" id="signupemail"><br><br>
-          <label for="password">Password</label><br>
-          <input name="password" type="password" placeholder="Enter your password" id="signuppassword"><br><br>
-          <button name="name" value="value" type="submit" onclick="processSignup()">SignUp</button>
+
+        <div class = "signuploginform">
+          <img src="signup-user.png" alt="loginicon" style="width:100px;height:100px;float:left">
+          <input type = "text" name = "Username" placeholder="Enter your username" id = "signupusername">
+          <input name = "Email-id" type="text" placeholder="Enter your email-id" id="signupemail">
+          <input name="password" type="password" placeholder="Enter your password" id="signuppassword">
+          <div class= "signuploginclick"  onclick="processSignup()">
+            Signup
+          </div>
+        </div>
+
       </div>
       <div id = "loadersignup" class="loader"></div>
     </li>
 
-    <li><div id="loaderlogin" class="loader"></div> <div id="loginbutton" onclick="loginclick()">LOGIN</div>
+    <li>
+      <div id="loaderlogin" class="loader"></div>
+      <div id="loginbutton" onclick="loginclick()">LOGIN</div>
       <div id = "logindropdown">
         <div id = "loginmessage"></div><br><br>
-          <label for="Email-id">Email-id</label><br>
-          <input name = "Email-id" type="text" placeholder="Enter your email-id" id="loginemail"><br><br>
-          <label for="password">Password</label><br>
-          <input name="password" type="password" placeholder="Enter your password" id="loginpassword"><br><br>
-          <button name="name" value="value" type="submit" onclick="checkLogin()">Login</button>
-    </div>
+        <div class = "signuploginform">
+          <img src="loginuser.jpg" alt="loginicon" style="width:100px;height:100px;float:left">
+          <input type="text" name = "Email-id" placeholder = "Enter your email_id" id = "loginemail">
+          <input type = "password" name = "password" placeholder = "Enter your password" id = "loginpassword">
+          <div class= "signuploginclick" onclick="checkLogin()">
+            Login
+          </div>
+        </div>
+      </div>
     </li>
+
+    <li>
+      <div style="float:left; display: inline-block; padding: 5px ; margin-left: 250px;">
+      <i class="fa fa-glass" style="font-size: 40px" aria-hidden="true">
+        <i class="fa fa-spinner" style="font-size:10px" aria-hidden="true"></i>
+      </i>
+      </div>
+    </li>
+
   </ul>
 </div>
 
